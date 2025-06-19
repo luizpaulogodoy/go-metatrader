@@ -8,11 +8,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/FortesenseLabs/go-metatrader/metatrader/actiontype"
-	"github.com/FortesenseLabs/go-metatrader/metatrader/models"
-	"github.com/FortesenseLabs/go-metatrader/metatrader/timeframes"
-	"github.com/FortesenseLabs/go-metatrader/metatrader/utils"
 	"github.com/go-gota/gota/dataframe"
+	"github.com/luizpaulogodoy/go-metatrader/metatrader/actiontype"
+	"github.com/luizpaulogodoy/go-metatrader/metatrader/models"
+	"github.com/luizpaulogodoy/go-metatrader/metatrader/timeframes"
+	"github.com/luizpaulogodoy/go-metatrader/metatrader/utils"
 	"github.com/mitchellh/mapstructure"
 )
 

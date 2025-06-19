@@ -1,4 +1,4 @@
-module github.com/FortesenseLabs/go-metatrader
+module github.com/luizpaulogodoy/go-metatrader
 
 go 1.20
 

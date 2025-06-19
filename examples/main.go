@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/FortesenseLabs/go-metatrader/metatrader"
+	"github.com/luizpaulogodoy/go-metatrader/metatrader"
 )
 
 func main() {
