@@ -320,7 +320,8 @@ func (mt *MetaTrader) Trade(symbol string, actionType string, volume float64, st
 
 	id := strconv.FormatInt(time.Now().Unix(), 10)
 	expiration := 0 // int(time.time()) + 60 * 60 * 24  # 1 day
-	command = "TRADE|id=" + id + "|actionType=" + actionType + "|symbol=" + symbol + "|volume=" + strconv.FormatFloat(volume, 'f', -1, 64) + "|price=" + strconv.FormatFloat(price, 'f', -1, 64) + "|stoploss=" + strconv.FormatFloat(stoploss, 'f', -1, 64) + "|takeprofit=" + strconv.FormatFloat(takeprofit, 'f', -1, 64) + "|expiration=" + strconv.Itoa(expiration) + "|deviation=" + strconv.FormatFloat(deviation, 'f', -1, 64)
+	command = "TRADE|id=" + id + "|actionType=" + actionType + "|symbol=" + symbol + "|volume=" + strconv.FormatFloat(volume, 'f', -1, 64) + "|price=" + strconv.FormatFloat(price, 'f', -1, 64) + "|stoploss=" + strconv.FormatFloat(stoploss, 'f', -1, 64) + "|takeprofit=" + strconv.FormatFloat(takeprofit, 'f', -1, 64) + "|expiration=" + strconv.Itoa(expiration) + "|deviation=" + strconv.FormatFloat(deviation, 'f', -1, 64) + "|comment=bot"
+	// command = "TRADE|id=" + id + "|actionType=" + actionType + "|symbol=" + symbol + "|volume=" + strconv.FormatFloat(volume, 'f', -1, 64) + "|price=" + strconv.FormatFloat(price, 'f', -1, 64) + "|stoploss=" + strconv.FormatFloat(stoploss, 'f', -1, 64) + "|takeprofit=" + strconv.FormatFloat(takeprofit, 'f', -1, 64) + "|expiration=" + strconv.Itoa(expiration) + "|deviation=" + strconv.FormatFloat(deviation, 'f', -1, 64)
 	// return mt.API.SendCommand("TRADE|id=" + id + "|actionType=" + actionType + "|symbol=" + symbol + "|volume=" + strconv.FormatFloat(volume, 'f', -1, 64) + "|price=" + strconv.FormatFloat(price, 'f', -1, 64) + "|stoploss=" + strconv.FormatFloat(stoploss, 'f', -1, 64) + "|takeprofit=" + strconv.FormatFloat(takeprofit, 'f', -1, 64) + "|deviation=" + strconv.FormatFloat(deviation, 'f', -1, 64))
 	fmt.Println(command)
 
