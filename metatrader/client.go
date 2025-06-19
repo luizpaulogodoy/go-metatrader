@@ -341,13 +341,13 @@ func (mt *MetaTrader) Buy(symbol string, volume float64, stoploss float64, takep
 // 	return mt.trade(symbol, "ORDER_TYPE_SELL", volume, stoploss, takeprofit, 0, deviation)
 // }
 
-// func (mt *MetaTrader) BuyLimit(symbol string, volume float64, stoploss float64, takeprofit float64, price float64, deviation float64) (*models.TradeResponse, error) {
-// 	return mt.trade(symbol, "ORDER_TYPE_BUY_LIMIT", volume, stoploss, takeprofit, price, deviation)
-// }
+func (mt *MetaTrader) BuyLimit(symbol string, volume float64, stoploss float64, takeprofit float64, price float64, deviation float64) error {
+	return mt.Trade(symbol, "ORDER_TYPE_BUY_LIMIT", volume, stoploss, takeprofit, price, deviation)
+}
 
-// func (mt *MetaTrader) SellLimit(symbol string, volume float64, stoploss float64, takeprofit float64, price float64, deviation float64) (*models.TradeResponse, error) {
-// 	return mt.trade(symbol, "ORDER_TYPE_SELL_LIMIT", volume, stoploss, takeprofit, price, deviation)
-// }
+func (mt *MetaTrader) SellLimit(symbol string, volume float64, stoploss float64, takeprofit float64, price float64, deviation float64) error {
+	return mt.Trade(symbol, "ORDER_TYPE_SELL_LIMIT", volume, stoploss, takeprofit, price, deviation)
+}
 
 // func (mt *MetaTrader) BuyStop(symbol string, volume float64, stoploss float64, takeprofit float64, price float64, deviation float64) (*models.TradeResponse, error) {
 // 	return mt.trade(symbol, "ORDER_TYPE_BUY_STOP", volume, stoploss, takeprofit, price, deviation)
